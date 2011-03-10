@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @post.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @post.date %>
+</p>
+
+<p class="background0">
+  <b>Article</b><br>
+  <%= @post.body %>
+</p>
+
+<br>
+||<i><b><%= link_to 'Edit Article', edit_post_path(@post) %> </i></b>||
+<i><b><%= link_to 'Back', posts_path %></i></b>||
+<br><br><br><br>
+
+<i><b><h2>Comments</h2></b></i>
+
+<% @post.comments.each do |c| %>
+  <i>
+    <b><%=h c.name %> Said:
+    <%= time_ago_in_words(c.created_at) %> ago </b>
+  </i>
+
+  <b><font color="#C11B17"><p class="comment0">
+    <%=h c.body %>
+  </p></font></b><br>
+<% end %>
+
+<% form_for [@post, Comment.new] do |f| %>
+  <p>
+
+    <%= f.label :name, "Your Name" %><br />
+    <%= f.text_field :name %><br />
+    <%= f.label :body, "Comment" %><br />
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit "Comment !" %>
+  </p>
+<% end %>

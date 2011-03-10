@@ -1,0 +1,37 @@
+<h1>Railsbook</h1>
+<b>Welcome To Railsbook. Your Articles Have Been Listed Below...</b>
+<br><br>
+<table>
+  <tr>
+    <th>NAME</th>
+    <th>TITLE</th> 
+    <th>DATE</th>
+    <th>ARTICLE</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+  <% even_odd=0 %>
+<% @posts.each do |post| %>
+
+<% if even_odd > 1 %>
+<% even_odd=0 %>
+<% end %>
+<tr class="background<%= even_odd%>">
+
+    <td><%= post.name %></td>
+    <td><%= post.title %></td>
+    <td><%= post.date %></td>
+    <td><%= post.body %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are You Sure You Want To Destroy The Article?', :method => :delete %></td>
+	<% even_odd= even_odd+1 %>
+  </tr>
+<% end %>
+</table>
+
+<br><br><br>
+
+||<i><b><%= link_to 'New Article', new_post_path %></i></b>||
