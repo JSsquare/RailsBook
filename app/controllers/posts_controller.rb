@@ -2,7 +2,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
+  if current_user
     @posts = Post.all
+	end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +43,7 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+	
 
     respond_to do |format|
       if @post.save

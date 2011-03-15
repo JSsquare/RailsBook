@@ -1,4 +1,4 @@
-body { background-color: #FFF; color: #333; }
+body { background-color: #E3E4FA; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -26,10 +26,13 @@ font-size: 30px;
 
 h2
 {
-color: white;
-background-color:#3B5998
+color: #25587E;
+background-color:#E3E4FA;
 }
-
+h3
+{
+color: red;
+}
 .comment0{
 font-family: book antiqua;
 }
