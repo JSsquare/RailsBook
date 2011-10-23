@@ -1,6 +1,6 @@
 <h2>Sign Up</h2>
 <b>It's free and always will be</b><br>
-_________________________________________________________________________________________________________________________________________________________
+<hr color=black size="2"/>
 <%= form_for @user do |f| %>
 <% if @user.errors.any? %>
 <div class="error_messages">
@@ -13,7 +13,9 @@ ________________________________________________________________________________
 </ul>
 </div>
 <% end %>
+
 <p>
+<i>
 <%= f.label :email %><br/>
 <%= f.text_field :email %>
 </p>
@@ -22,9 +24,12 @@ ________________________________________________________________________________
 <%= f.label :password %><br/>
 <%= f.password_field :password %>
 </p>
+
 <p>
 <%= f.label :password_confirmation, 'Confirm Password'%><br/>
 <%= f.password_field :password_confirmation %>
 </p>
-<p class ="button"> <%= f.submit 'Sign Up !' %></p>
+
+<p class ="button"> <%= f.submit "Submit"%></p>
 <% end %>
+

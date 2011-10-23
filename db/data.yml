@@ -1,0 +1,64 @@
+
+---
+posts:
+  columns:
+  - id
+  - name
+  - title
+  - date
+  - body
+  - user_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - SpiderMan
+    - New Title
+    - '2011-07-23'
+    - New Body Yaaay!
+    - !!null 
+    - '2011-07-23 07:04:27.005239'
+    - '2011-07-23 07:04:27.005239'
+
+---
+comments:
+  columns:
+  - id
+  - name
+  - body
+  - post_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - ''
+    - so boring
+    - 1
+    - '2011-07-23 07:04:50.024913'
+    - '2011-07-23 07:04:50.024913'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - password_hash
+  - password_salt
+  - post_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - test@test.com
+    - $2a$10$QfhPOIL7rUU20pTih5Hun.MxiCZvB6.0VLhaZfnXL2CSQsfcfvwzO
+    - $2a$10$QfhPOIL7rUU20pTih5Hun.
+    - !!null 
+    - '2011-07-23 07:01:59.945956'
+    - '2011-07-23 07:01:59.945956'
+  - - 2
+    - testing@test.com
+    - $2a$10$kEFs7ePtA8/HLZ80Tfb.T.DAySScE76elxOmUNyi3wztTzp1fuXNi
+    - $2a$10$kEFs7ePtA8/HLZ80Tfb.T.
+    - !!null 
+    - '2011-10-22 15:32:55.644806'
+    - '2011-10-22 15:32:55.644806'

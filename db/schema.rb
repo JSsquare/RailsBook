@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110314131440) do
     t.string   "title"
     t.date     "date"
     t.text     "body"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20110314131440) do
     t.string   "email"
     t.string   "password_hash"
     t.string   "password_salt"
+    t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
