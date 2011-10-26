@@ -14,7 +14,10 @@
 <body>
   
   <div id="toggle_nav" align="center">
-    <a href="#" id="show_nav"><img src="/images/down_arrow.png"></a>
+    <a href="#" id="show_nav_down"><img src="/images/down_arrow.png"></a>
+  </div>
+  <div id="toggle_nav_side" align="center">
+    <a href="#" id="show_nav_up"><img src="/images/side_arrow.png"></a>
   </div>
   
 <div id="user_nav" align="center">
@@ -23,8 +26,9 @@
 <%= link_to "Log Out", log_out_path %>
 </p>
 <% else %>
-<%= link_to "Sign Up>>", sign_up_path %> ||
-<%= link_to "Log In>>", log_in_path %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to "Sign Up>>", {:controller => 'users', :action=>'new'}, :class=>'link_class'%>  
+<%= link_to "Log In>>", {:controller => 'users', :action=>'new'}, :class=>'link_class' %>
 <% end %>
 </div>
 

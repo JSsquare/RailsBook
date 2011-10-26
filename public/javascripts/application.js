@@ -3,7 +3,18 @@
 
 $(document).ready(function(){    
     $('#user_nav').hide();
-      $('a#show_nav').click(function(){
+    $('#toggle_nav_side').hide();
+    $('#rails_image').hide();
+      $('a#show_nav_down').click(function(){          
+        $('#toggle_nav').hide();  
         $('#user_nav').toggle('slow');
+        $('#rails_image').toggle('slow');
+        $('#toggle_nav_side').fadeIn('slow');
+      });
+      $('a#show_nav_up').click(function(){          
+        $('#toggle_nav_side').hide();  
+        $('#user_nav').toggle('slow');
+        $('#rails_image').toggle('slow');
+        $('#toggle_nav').fadeIn('slow');
       });
   });
