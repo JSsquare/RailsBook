@@ -85,3 +85,7 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+#rails_image {
+    height: 20px;
+}
