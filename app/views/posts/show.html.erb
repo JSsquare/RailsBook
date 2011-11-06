@@ -26,7 +26,7 @@
 <br><br><br><br>
 
 <i><b><h2>Comments</h2></b></i>
-
+ 
 <% @post.comments.each do |c| %>
   <i>
     <b><%=h c.name %> Said:
@@ -38,6 +38,10 @@
   </p></font></b><br>
 <% end %>
 
+  <div id="toggle_comment" align="center">
+    <a href="#" id="toggle_comment" class ="link_class">Write A Comment</a>
+  </div>
+  <div id="comment_area" align="center">
 <% form_for [@post, Comment.new] do |f| %>
   <p>
 
@@ -51,3 +55,5 @@
     <%= f.submit "Comment !" %>
   </p>
 <% end %>
+  </div>
+  
