@@ -15,25 +15,25 @@ pre {
 }
 
 a { color: #3B9C9C; }
-a:visited { color: #3B9C9C; }
-a:hover { color: #3B9C9C; background-color:#E0FFFF; }
+a:visited { color: #800517; }
+a:hover { color: white; background-color:#800517; }
 
 h1
 {
 font-family: tahoma;
-background-color:#3B5998;
+background-color:#800517;
 color:white;
 font-size: 30px;
 }
 
 h2
 {
-color: #25587E;
+color: #800517;
 background-color:#E3E4FA;
 }
 h3
 {
-color: red;
+color: black;
 }
 .comment0{
 font-family: book antiqua;
