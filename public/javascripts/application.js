@@ -22,7 +22,17 @@ $(document).ready(function(){
       
       $('a#toggle_comment').click(function(){          
         $('#comment_area').toggle('slow');
-        $("html, body").animate({ scrollTop: 1000 }, "slow");
+        $("html, body").animate({scrollTop: 1000}, "slow");
         
       });
+      
+      $('#sign_up_form form').validate({
+          rules: {
+              user_email: {
+                  required: true,
+                  email :true
+              }
+          }
+      });
   });
+

@@ -1,5 +1,11 @@
+<script src="jquery.validate.min.js">
+  
+</script>
 <h2>Sign Up</h2>
-<b>It's free and always will be</b><br>
+<b>It's free and always will be</b><br/>
+
+<div id="sign_up_form" align="center">
+  
 <hr color=black size="2"/>
 <%= form_for @user do |f| %>
 <% if @user.errors.any? %>
@@ -32,3 +38,8 @@
 
 <p class ="button"> <%= f.submit "Submit"%></p>
 <% end %>
+
+</div>
+
+    
+</div>
